@@ -1,0 +1,16 @@
+name: AfkBot
+version: '${version}'
+main: com.afkbot.AfkBotPlugin
+api-version: '1.21'
+description: 挂机假人插件 - 由管理员召唤假人，自动加载地形，不占用人数上限
+author: AfkBot
+commands:
+  bot:
+    description: 挂机假人管理命令
+    usage: /bot <create|remove|list|tp|tphere|removeall|reload>
+    permission: afkbot.admin
+    permission-message: §8[§b挂机假人§8] §c你没有权限使用该命令。
+permissions:
+  afkbot.admin:
+    description: 管理挂机假人（创建/移除/查看/传送/重载）
+    default: op

@@ -1,0 +1,77 @@
+# ============================================
+#  挂机假人插件 (AfkBot) - 消息文件
+#  所有玩家可见的提示文本都在这里配置
+#  修改后执行 /bot reload 生效
+#
+#  颜色代码：&0-9 &a-f &k &l &m &n &o
+#  可用变量见各条目说明
+# ============================================
+
+# 所有消息的统一前缀
+prefix: '&8[&b挂机假人&8] &r'
+
+# 无权限时的提示
+no-permission: '%prefix%&c你没有权限使用该命令。'
+
+# 命令用法提示
+usage: |-
+  %prefix%&e用法：
+  &8 ▶ &b/bot create <名称> [x y z] &7- 创建假人（可指定坐标）
+  &8 ▶ &b/bot remove <名称> &7- 移除假人
+  &8 ▶ &b/bot list &7- 查看所有假人（可点击传送）
+  &8 ▶ &b/bot tp <名称> &7- 传送到假人身边
+  &8 ▶ &b/bot tphere <名称> &7- 将假人带到你身边
+  &8 ▶ &b/bot removeall &7- 移除全部假人
+  &8 ▶ &b/bot reload &7- 重载配置文件
+
+# 创建成功（变量：%name% 名称、%world% 世界、%x% %y% %z% 坐标）
+create-success: '%prefix%&a已创建假人 &e%name% &a（位置：&f%world% %x%, %y%, %z%&a）'
+
+# 名称格式错误（变量：%name% 名称）
+create-invalid-name: '%prefix%&c名称 &e%name% &c无效：只能使用 3-16 位字母、数字或下划线。'
+
+# 名称已被占用（变量：%name% 名称）
+create-duplicate: '%prefix%&c名称 &e%name% &c已被其他玩家或假人使用。'
+
+# 达到数量上限（变量：%max% 上限）
+create-limit: '%prefix%&c假人数量已达上限（%max% 个），请先移除部分假人。'
+
+# 移除成功（变量：%name% 名称）
+remove-success: '%prefix%&a已移除假人 &e%name%&a。'
+
+# 移除失败：找不到假人（变量：%name% 名称）
+remove-not-found: '%prefix%&c找不到假人 &e%name%&c。'
+
+# 移除全部（变量：%count% 数量）
+removeall-success: '%prefix%&a已移除全部假人，共 &e%count% &a个。'
+
+# 没有任何假人
+list-empty: '%prefix%&7当前没有任何假人。'
+
+# 列表标题（变量：%count% 当前数量、%max% 上限）
+list-header: '%prefix%&a假人列表 &7（&f%count%&7/&f%max%&7）'
+
+# 列表条目（变量：%name% %world% %x% %y% %z%）
+# 提示：本条目一般无需修改，传送按钮会自动生成
+list-entry: '&8 ▶ &f%name% &8- &7%world% &8(&7%x%, %y%, %z%&8)'
+
+# 列表中「传送到此」按钮的悬浮提示
+list-hover-tp: '&b点击传送到假人 &f%name% &b身边'
+
+# 列表中「带过来」按钮的悬浮提示
+list-hover-tphere: '&e点击将假人 &f%name% &e带到你身边'
+
+# 传送成功（变量：%name% 名称）
+tp-success: '%prefix%&a已传送到假人 &e%name% &a身边。'
+
+# 将假人带过来成功（变量：%name% 名称）
+tphere-success: '%prefix%&a已将假人 &e%name% &a带到你身边。'
+
+# 假人与你不在同一个世界，无法带过来
+tphere-other-world: '%prefix%&c假人 &e%name% &c在其他世界，无法直接传送。'
+
+# 重载成功
+reload-success: '%prefix%&a配置文件与消息文件已重载。'
+
+# 仅限玩家执行的命令
+players-only: '%prefix%&c该命令只能由玩家执行。'
